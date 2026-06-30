@@ -39,22 +39,28 @@ source quantum_env/bin/activate   # On Windows: quantum_env\Scripts\activate
 
 # Install dependencies
 pip install -r requirements.txt
-Usage
-Run all demonstrations
-bash
+```
+
+## Usage
+```bash
+# Run all demonstrations
 python main.py
-Run verification against Qiskit
-bash
+
+# Run verification against Qiskit
 python VerifyQiskit.py
-Example: Bell State Generation
-python
+```
+
+## Example: Bell State Generation
+```python
 from algorithms import bell_state
 from visualization import plot_probabilities
 
 state = bell_state()
 plot_probabilities(state, title="Bell State |Φ⁺⟩")
-Project Structure
-text
+```
+
+## Project Structure
+```text
 quantum_simulator/
 ├── gates.py              # Quantum gate library
 ├── simulator.py          # Simulation engine (state vector, gate application, measurement)
@@ -64,35 +70,24 @@ quantum_simulator/
 ├── main.py               # Main execution script
 ├── requirements.txt      # Python dependencies
 └── README.md             # This file
-Verification Results
+```
+
+## Verification Results
+
 The simulator was verified against IBM's Qiskit platform. All algorithms achieved:
 
+```text
 Fidelity: 1.000000000000000 (perfect agreement)
 
 Amplitude Error: < 1e-15
 
 Probability MSE: < 1e-30
+```
 
-License
+### License
 This project is open-source and available for educational and research purposes.
 
-Author
-Saimir Çiraku – Master's student at "Aleksandër Moisiu" University, Durrës
+### Author
+Saimir Çiraku - Master's student at "Aleksandër Moisiu" University, Durrës
 
-Email: sciraku@gmail.com
-
-GitHub: SaimirC
-
-Acknowledgments
-Supervisor: Dr. [Emri i drejtuesit]
-
-Inspired by the tutorial of McGuffin, Robert, and Ikeda (2025)
-
-Optimal gate decomposition based on Vatan & Williams (2004)
-
-References
-Nielsen, M. A., & Chuang, I. L. (2010). Quantum Computation and Quantum Information.
-
-Vatan, F., & Williams, C. (2004). Optimal quantum circuits for general two-qubit gates.
-
-McGuffin, M. J., Robert, J.-M., & Ikeda, K. (2025). How to Write a Simulator for Quantum Circuits from Scratch.
+### Email: sciraku@gmail.com
